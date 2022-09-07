@@ -1,10 +1,14 @@
 # Terraform module for ingress-nginx
 
-This modules deploys an nginx ingress controller on a kubernetes cluster using helm.
+This module deploys the following helm chart on a kubernetes cluster:
+
+| Name          | Repository                                 | Version |
+| ------------- | ------------------------------------------ | ------- |
+| ingress-nginx | https://kubernetes.github.io/ingress-nginx | 1.11.0  |
 
 ## Module input parameters
 
-| Parameter                      | Type     | Description                                                                        |
-| ------------------------------ |--------- | ---------------------------------------------------------------------------------- |
-| namespace                      | Required | The kubernetes namespace at which the ingress-nginx chart will be deployed         |
-| node_selector                  | Optional | A map variable with nodeSelector labels applied when placing pods of the chart on the cluster |
+| Parameter     | Type     | Description                                                                                   |
+| ------------- | -------- | --------------------------------------------------------------------------------------------- |
+| namespace     | Required | The kubernetes namespace at which the ingress-nginx chart will be deployed                    |
+| node_selector | Optional | A map variable with nodeSelector labels applied when placing pods of the chart on the cluster |
